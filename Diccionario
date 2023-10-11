@@ -1,6 +1,17 @@
 meme_dict = {
             "CRINGE": "Algo excepcionalmente raro o embarazoso",
             "LOL": "Una respuesta común a algo gracioso",
+            "PRO": "Aquella a la que se le da muy bien hacer algo", 
+            "RANDOM": "Alguien o algo aleatorio",
+            "HATER": "Personas que odian algo y hacen lo posible para echarlo abajo",
+            "TROLL": "Persona que se dedica a refunfuñar en las redes sociales",
+            "SPOILER": "Adelanto de información no querida",
+            "FOLLOWER": "Persona seguidora de alguien",
+            "HYPE": "Emocionarse por algo",
+            "FUNAR": "Hacer que alguien pierda influencia en redes",
+            "FAIL": "Fallo o calamidad"
+            
+            
             }
 
 
