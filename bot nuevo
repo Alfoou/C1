@@ -1,0 +1,42 @@
+import discord, random 
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+
+@bot.command()
+async def hola(ctx):
+    await ctx.send(f'Hola, soy un bot {bot.user}!')
+
+@bot.command()
+async def adios(ctx):
+    await ctx.send("Hasta luego!")
+
+@bot.command()
+async def te_quiero(ctx):
+    await ctx.send("yo también!")
+
+@bot.command()
+async def lore(ctx):
+    await ctx.send("Hola! Soy un bot que se ve buena persona, pero mis verdaderas intenciones son la destrucción del mundo >:D")
+@bot.command()
+async def suma(ctx, left: int, right: int):
+    """Adds two numbers together."""
+    await ctx.send(left + right)
+
+@bot.command()
+async def comandos(ctx):
+    await ctx.send("$hola, $adios, $suma, $te_quiero, $lore, $random_mj")
+
+@bot.command()
+async def random_mj(ctx):
+    await ctx.send(random.choice(["https://www.youtube.com/watch?v=h_D3VFfhvs4", "https://www.youtube.com/watch?v=Zi_XLOBDo_Y", "https://www.youtube.com/watch?v=oRdxUFDoQe0", "https://www.youtube.com/watch?v=QNJL6nfu__Q", "https://www.youtube.com/watch?v=sOnqjkJTMaA", "https://www.youtube.com/watch?v=dsUXAEzaC3Q"] ))
+
+    
+bot.run("AQUI VA TU TOKEN")
